@@ -1,31 +1,38 @@
-.App {
-  text-align: center;
+:root{
+  --bg: #0f1724;
+  --card: linear-gradient(135deg,#7b61ff 0%, #5ec8ff 100%);
+  --muted: #9aa4b2;
+  --accent: #6ee7b7;
+  --glass: rgba(255,255,255,0.06);
+  --radius: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{box-sizing:border-box}
+
+html,body,#root{
+  height:100%;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(94,200,255,0.06), transparent 10%),
+              radial-gradient(1000px 500px at 90% 90%, rgba(123,97,255,0.05), transparent 15%),
+              var(--bg);
+  color:#e6eef8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-shell{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:48px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.container-card{
+  width:100%;
+  max-width:920px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  backdrop-filter: blur(6px) saturate(120%);
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +42,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: -webkit-linear-gradient(90deg, #8b92d1, #5c477b, #2a032c)
+    no-repeat;
+}
+.Spp {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: -webkit-linear-gradient(90deg, #fbcf9b,#fac77f,#f7c061,#f1ba3f,#e8b506);
+}
+
+.armel-photo{
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 10px solid rgba(255,255,255,0.9); /* 10px border */
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.6);
+}
+
+/* Timer that shows how long since the component was mounted */
+.mount-timer{
+  margin-top: 12px;
+  padding: 8px 12px;
+  display: inline-block;
+  background: rgba(0,0,0,0.25);
+  color: var(--accent);
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(2,6,23,0.45);
 }
